@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+	
+	\vspace*{\fill}
+	
+	\begin{paracol}{2}
+		
+		% Name & headline
+		\heading{Anastasiya Kulevich}{MIPT undergraduate \\ Bachelor of Applied Mathematics \& Physics}
+		
+		\switchcolumn
+		
+		% Identity card
+		\vspace{0.01\textheight}
+		\begin{supertabular}{ll}
+			\footnotesize\faPhone & +7(936)-272-2037 \\
+			\footnotesize\faEnvelope & \href{mailto:kulevich.aiu@phystech.edu}{kulevich.aiu@phystech.edu} \\
+			\footnotesize\faGithub & \href{https://github.com/princess-oregano}{princess-oregano} \\
+		\end{supertabular}
+		
+		\bigskip
+		\switchcolumn*
+		
+		\section{profile}
+		
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Second-year MIPT student
+			\item Successfully finished Compiler Technology course
+			\item Got excellent marks as a group leader of 4 students in Computer Science classes
+			
+		\end{itemize}
+		
+		\switchcolumn
+		
+		\section{skills}
+		\begin{supertabular}{rl}
+			\tableentry{\footnotesize\faCode}{C/C++ \textperiodcentered{} x86-64 Assembly \textperiodcentered{} Python }{}
+			\tableentry{}{Make \textperiodcentered{} Git \textperiodcentered{} Linux
+				\textperiodcentered{} perf \textperiodcentered{} LaTeX}{}
+			\tableentry{}{}{}
+			
+			\tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} advanced}{}
+			\tableentry{}{Russian \textperiodcentered{} native}{}
+			\tableentry{}{}{}
+			
+			\tableentry{\footnotesize\faComments}{flexibility \textperiodcentered{} conflict resolution}{}
+			\tableentry{}{problem-solving \textperiodcentered{} leadership}{}
+		\end{supertabular}
+		
+		\switchcolumn
+		
+		\section{education}
+		
+		\entry{Bachelor of Applied Mathematics \& Physics}{MIPT -- Department of Radio Engineering and Cybernetics}{2022 -- 2026}{     }
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item GPA: 8.9/10.0
+			\item GPA (Computer Science): 10.0/10.0
+		\end{itemize}
+		
+		\section{main projects}
+		
+		\medskip
+
+				
+		\entry{mipt\_ipc \normalfont \footnotesize{(\href{https://github.com/princess-oregano/mipt_ipc}{github.com/princess-oregano/mipt\_ipc})}}{Tools: C, Make, POSIX}{ }{2023}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Inter-Process Communication course projects.  
+		\end{itemize}
+
+		\entry{hashtable \normalfont \footnotesize{(\href{https://github.com/princess-oregano/hashtable}{github.com/princess-oregano/hashtable})}}{Tools: C, Make, perf, x86-64 Assembly, SIMD}{ }{2023}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Hashtable implementation with performance tests and optimization.
+		\end{itemize}
+
+		
+		\entry{mandelbrot \normalfont \footnotesize{(\href{https://github.com/princess-oregano/mandelbrot}{github.com/princess-oregano/mandelbrot})}}{Tools: C, Make, perf, SIMD, SFML}{ }{2023}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Showcase of possible SIMD optimizations for Mandelbrot set
+			generator.
+		\end{itemize}
+				
+		\entry{processor \normalfont \footnotesize{(\href{https://github.com/princess-oregano/processor}{github.com/princess-oregano/processor})}}{Tools: C, Make}{ }{2022}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item  Virtual machine and assembler for custom assembly language.
+		\end{itemize}	
+		
+		\medskip
+
+		\switchcolumn
+		
+		\section{interests}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Processor Architecture
+			\item Compiler Technology
+			\item Data Management
+			\item Operating Systems
+		\end{itemize}
+		
+		\section{achievements}
+		\begin{supertabular}{rl}
+			\tableentry{2022}{\textbf{2nd degree diploma}}{}
+			\tableentry{}{National Physics Olympiad}{spaceafter}
+			\tableentry{2022}{\textbf{1st degree diploma}}{}
+			\tableentry{}{MIPT 'Phystech' Olympiad}{spaceafter}
+		\end{supertabular}
+		
+	\end{paracol}
+	
+\end{document}
